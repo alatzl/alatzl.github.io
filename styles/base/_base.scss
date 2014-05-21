@@ -1,0 +1,27 @@
+// BASE STYLES
+
+*, *:before {
+  @include box-sizing(border-box);
+}
+
+::-moz-selection {
+  background: $selection;
+  color: $lightest;
+  text-shadow: none;
+}
+
+::selection {
+  background: $selection;
+  color: $lightest;
+  text-shadow: none;
+}
+
+body {
+  background-image: url('../images/bkgd.png');
+}
+.wrapper {
+  width: 90%;
+  max-width: 960px;
+  padding-top: 100px;
+  margin: 0 auto;
+}

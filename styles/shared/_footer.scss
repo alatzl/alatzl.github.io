@@ -1,0 +1,25 @@
+// FOOTER STYLES
+
+footer {
+  @extend .text-center;
+
+  .colophon {
+    font-size: .7em;
+    font-style: italic;
+    margin: 0 auto 10px;
+
+    @include tablet-portrait-and-up {
+      width: 30%;
+    }
+
+    a {
+      padding: 2px;
+      color: $brand-light;
+
+      &:hover {
+        background: $brand-light;
+        color: $lightest;
+      }
+    }
+  }
+}

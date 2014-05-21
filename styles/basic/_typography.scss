@@ -1,0 +1,56 @@
+// TYPOGRAPHY
+
+@include mobile-portrait-and-up {
+
+}
+
+// TYPEFACES
+h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', Helvetica, Arial;
+  color: $text;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: Lora, Georgia, serif;
+  color: $brand-light;
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+h4 {
+  font: 300 1.2em/150% Lora, Georgia, sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+p, a, ul, li {
+  font: 300 .9em/130% Lora, Georgia, serif;
+  color: $text;
+  line-height: 120%;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  @include colored-link($brand-light);
+  font: inherit;
+  text-decoration: none;
+}
+
+b, strong {
+  font-weight: 500;
+}

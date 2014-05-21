@@ -1,0 +1,85 @@
+// HEADER STYLES
+
+header {
+  @include box-shadow(0 1px 10px 0 rgba(0,0,0,0.2%));
+  @extend .full-width;
+  position: fixed;
+  top: 0;
+  background: $lightest;
+  z-index: 100;
+  padding-bottom: 10px;
+
+  @include mobile-landscape-and-up {
+    padding-bottom: 5px;
+  }
+
+  h1 {
+    &#logo {
+      margin: 0;
+    }
+
+    a {
+      @extend .text-center;
+      display: block;
+      font-size: 24px;
+      font-weight: 300;
+      color: $brand-light;
+      font-style: italic;
+      padding-top: 5px;
+      margin: 0;
+
+      &:hover {
+        background: transparent;
+        color: $brand-light;
+      }
+
+      @include mobile-landscape-and-up {
+        float: left;
+        text-align: left;
+        width: 30%;
+        margin: 0 0 0 10%;
+      }
+    }
+  }
+
+  nav {
+    @extend .full-width;
+    max-width: 960px;
+    padding-top: 10px;
+    margin-right: 10%;
+
+    #menu-main {
+      @extend .text-center;
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+          font: 300 16px/120% 'Lora', serif;
+          font-style: italic;
+
+          &:hover {
+            background-color: $brand-light;
+          }
+        }
+      }
+    }
+
+    @include mobile-landscape-and-up {
+      width: 50%;
+      float: right;
+
+      #menu-main {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.lt-ie9 h1#logo a {
+  @extend .float-left;
+  @extend .text-left;
+  @extend .third-width;
+  margin: 0 0 0 10%;
+}

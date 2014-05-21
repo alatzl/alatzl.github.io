@@ -1,0 +1,55 @@
+// RESPONSIVE MIXINS
+
+$mq-mobile-portrait: 320px;
+$mq-mobile-landscape: 568px;
+$mq-tablet-portrait: 768px;
+$mq-tablet-landscape: 1024px;
+$mq-desktop: 1200px;
+
+@mixin mobile-only {
+  @media only screen and (max-width: $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait-and-up {
+  @media only screen and (min-width: $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-and-up {
+  @media only screen and (min-width: $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media only screen and (min-width: $mq-mobile-landscape + 1) and (max-width: $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-and-up {
+  @media only screen and (min-width: $mq-tablet-portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-and-up {
+  @media only screen and (min-width: $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin desktop-and-up {
+  @media only screen and (min-width: $mq-desktop) {
+    @content;
+  }
+}
+
+@mixin tall-screen {
+  @media only screen and (max-height: 700px) {
+    @content;
+  }
+}

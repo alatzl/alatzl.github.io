@@ -1,0 +1,175 @@
+// HOME PAGE
+
+section {
+  @extend .full-width;
+  padding-top: 40px;
+  margin-bottom: 40px;
+
+  & + section {
+    border-top: 1px solid #ddd;
+  }
+
+  h2 {
+    @extend .text-center;
+    font-size: 4em;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    margin-bottom: 50px;
+  }
+}
+
+#opening {
+  padding: 0 5%;
+
+  h3 {
+    @extend .text-center;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  // branded link colors
+  .twitter { @include colored-link($twitter); }
+  .linkedin { @include colored-link($linkedin); }
+  .flickr { @include colored-link($flickr); }
+
+  @include mobile-landscape-and-up {
+    h3 {
+      font-size: 40px;
+    }
+  }
+}
+
+#work {
+  .project {
+    width: 96%;
+    margin: 0 2% 20px;
+    overflow: hidden;
+
+    & + .project {
+      padding-top: 30px;
+      border-top: 1px solid $rule;
+    }
+
+    .flexslider, .details {
+      @extend .full-width;
+    }
+
+    .flexslider {
+      margin: 0 0 55px;
+    }
+
+    .details {
+      h3 {
+        font: 2em Lora, Georgia, serif;
+        font-style: italic;
+      }
+
+      .subdetail {
+        font: 1.5em/1em 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-variant: small-caps;
+        font-weight: 300;
+        text-transform: lowercase;
+      }
+    }
+
+    @include tablet-portrait-and-up {
+      .flexslider {
+        width: 55%;
+        max-width: 600px;
+        float: left;
+        margin-right: 5%;
+      }
+
+      .details {
+        width: 40%;
+        float: right;
+        margin: 5px 0 0;
+      }
+    }
+  }
+}
+
+#about, #contact {
+  padding: 40px 5% 0;
+
+  @include tablet-portrait-and-up {
+    padding: 40px 15% 0;
+  }
+}
+
+#contact {
+  h4 {
+    @extend .text-center;
+  }
+}
+
+.social-media {
+  @extend .text-center;
+  padding-top: 20px;
+
+  li {
+    display: inline-block;
+    margin: 0;
+
+    a {
+      font-size: 0px;
+      text-decoration: none;
+      margin: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:before {
+        color: $text; // IE back-up
+        color: $link;
+        font: 60px 'Atzl';
+      }
+
+      &:hover {
+        background: transparent;
+        &:before {
+          color: $text; // IE back-up
+          color: $link-hover;
+        }
+      }
+
+      &.email:before { content: 'E'; }
+      &.twitter:before { content: 'A'; }
+      &.linkedin:before { content: 'B'; }
+      &.singlebrook:before { content: 'C'; }
+      &.flickr:before { content: 'D'; }
+      &.resume:before { content: 'F'; }
+    }
+
+    @include mobile-landscape-and-up {
+      margin: 0 10px;
+
+      a:before {
+        font-size: 70px;
+      }
+    }
+  }
+}
+
+.lt-ie9 {
+  #work .project {
+    .flexslider {
+      @extend .float-left;
+      width: 55%;
+      max-width: 600px;
+      margin-right: 5%;
+    }
+
+    .details {
+      @extend .float-right;
+      width: 40%;
+      margin: 5px 0 0;
+    }
+  }
+
+  #about, #contact {
+    padding: 40px 15% 0;
+  }
+}
