@@ -32,6 +32,7 @@ section {
   .twitter { @include colored-link($twitter); }
   .linkedin { @include colored-link($linkedin); }
   .flickr { @include colored-link($flickr); }
+  .eui { @include colored-link($eui); }
 
   @include mobile-landscape-and-up {
     h3 {
