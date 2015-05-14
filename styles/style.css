@@ -652,20 +652,21 @@ header nav #menu-main li a:hover {
 footer .colophon {
   font-size: .7em;
   font-style: italic;
+  width: 80%;
   margin: 0 auto 10px;
 }
 @media only screen and (min-width: 768px) {
   /* line 6, shared/_footer.scss */
   footer .colophon {
-    width: 30%;
+    width: 40%;
   }
 }
-/* line 15, shared/_footer.scss */
+/* line 16, shared/_footer.scss */
 footer .colophon a {
   padding: 2px;
   color: #7EA913;
 }
-/* line 19, shared/_footer.scss */
+/* line 20, shared/_footer.scss */
 footer .colophon a:hover {
   background: #7EA913;
   color: #FFFFFF;
@@ -686,7 +687,7 @@ section h2 {
   font-weight: 400;
   text-transform: lowercase;
   font-variant: small-caps;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /* line 22, home/_view.scss */
@@ -725,19 +726,6 @@ section h2 {
   color: #FFFFFF;
 }
 /* line 34, home/_view.scss */
-#opening .flickr {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #ff0084;
-  padding: 3px 5px;
-}
-/* line 8, base/_mixins.scss */
-#opening .flickr:hover, #opening .flickr:active {
-  background: #ff0084;
-  color: #FFFFFF;
-}
-/* line 35, home/_view.scss */
 #opening .eui {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -751,33 +739,33 @@ section h2 {
   color: #FFFFFF;
 }
 @media only screen and (min-width: 568px) {
-  /* line 38, home/_view.scss */
+  /* line 37, home/_view.scss */
   #opening h3 {
     font-size: 40px;
   }
 }
 
-/* line 45, home/_view.scss */
+/* line 44, home/_view.scss */
 #work .project {
   width: 96%;
   margin: 0 2% 20px;
   overflow: hidden;
 }
-/* line 50, home/_view.scss */
+/* line 49, home/_view.scss */
 #work .project + .project {
   padding-top: 30px;
   border-top: 1px solid #ddd;
 }
-/* line 59, home/_view.scss */
+/* line 58, home/_view.scss */
 #work .project .flexslider {
   margin: 0 0 55px;
 }
-/* line 64, home/_view.scss */
+/* line 63, home/_view.scss */
 #work .project .details h3 {
   font: 2em Lora, Georgia, serif;
   font-style: italic;
 }
-/* line 69, home/_view.scss */
+/* line 68, home/_view.scss */
 #work .project .details .subdetail {
   font: 1.5em/1em 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-variant: small-caps;
@@ -785,14 +773,14 @@ section h2 {
   text-transform: lowercase;
 }
 @media only screen and (min-width: 768px) {
-  /* line 78, home/_view.scss */
+  /* line 77, home/_view.scss */
   #work .project .flexslider {
     width: 55%;
     max-width: 600px;
     float: left;
     margin-right: 5%;
   }
-  /* line 85, home/_view.scss */
+  /* line 84, home/_view.scss */
   #work .project .details {
     width: 40%;
     float: right;
@@ -800,98 +788,60 @@ section h2 {
   }
 }
 
-/* line 94, home/_view.scss */
+/* line 93, home/_view.scss */
 #about, #contact {
   padding: 40px 5% 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 94, home/_view.scss */
+  /* line 93, home/_view.scss */
   #about, #contact {
     padding: 40px 15% 0;
   }
 }
 
-/* line 108, home/_view.scss */
+/* line 107, home/_view.scss */
 .social-media {
   padding-top: 20px;
 }
-/* line 112, home/_view.scss */
+/* line 111, home/_view.scss */
 .social-media li {
   display: inline-block;
   margin: 0;
 }
-/* line 116, home/_view.scss */
+/* line 115, home/_view.scss */
 .social-media li a {
-  font-size: 0px;
+  color: rgba(126, 169, 19, 0.7);
   text-decoration: none;
   margin: 0;
 }
-/* line 121, home/_view.scss */
+/* line 120, home/_view.scss */
 .social-media li a:first-child {
   margin-left: 0;
 }
-/* line 125, home/_view.scss */
-.social-media li a:before {
-  color: #555;
-  color: rgba(126, 169, 19, 0.7);
-  font: 60px 'Atzl';
-}
-/* line 131, home/_view.scss */
+/* line 124, home/_view.scss */
 .social-media li a:hover {
+  color: #7ea913;
   background: transparent;
 }
-/* line 133, home/_view.scss */
-.social-media li a:hover:before {
-  color: #555;
-  color: #7ea913;
-}
-/* line 139, home/_view.scss */
-.social-media li a.email:before {
-  content: 'E';
-}
-/* line 140, home/_view.scss */
-.social-media li a.twitter:before {
-  content: 'A';
-}
-/* line 141, home/_view.scss */
-.social-media li a.linkedin:before {
-  content: 'B';
-}
-/* line 142, home/_view.scss */
-.social-media li a.singlebrook:before {
-  content: 'C';
-}
-/* line 143, home/_view.scss */
-.social-media li a.flickr:before {
-  content: 'D';
-}
-/* line 144, home/_view.scss */
-.social-media li a.resume:before {
-  content: 'F';
-}
 @media only screen and (min-width: 568px) {
-  /* line 112, home/_view.scss */
+  /* line 111, home/_view.scss */
   .social-media li {
     margin: 0 10px;
   }
-  /* line 150, home/_view.scss */
-  .social-media li a:before {
-    font-size: 70px;
-  }
 }
 
-/* line 159, home/_view.scss */
+/* line 138, home/_view.scss */
 .lt-ie9 #work .project .flexslider {
   width: 55%;
   max-width: 600px;
   margin-right: 5%;
 }
-/* line 166, home/_view.scss */
+/* line 145, home/_view.scss */
 .lt-ie9 #work .project .details {
   width: 40%;
   margin: 5px 0 0;
 }
-/* line 173, home/_view.scss */
+/* line 152, home/_view.scss */
 .lt-ie9 #about, .lt-ie9 #contact {
   padding: 40px 15% 0;
 }

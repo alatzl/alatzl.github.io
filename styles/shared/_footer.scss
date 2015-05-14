@@ -6,10 +6,11 @@ footer {
   .colophon {
     font-size: .7em;
     font-style: italic;
+    width: 80%;
     margin: 0 auto 10px;
 
     @include tablet-portrait-and-up {
-      width: 30%;
+      width: 40%;
     }
 
     a {

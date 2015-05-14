@@ -15,7 +15,7 @@ section {
     font-weight: 400;
     text-transform: lowercase;
     font-variant: small-caps;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -31,7 +31,6 @@ section {
   // branded link colors
   .twitter { @include colored-link($twitter); }
   .linkedin { @include colored-link($linkedin); }
-  .flickr { @include colored-link($flickr); }
   .eui { @include colored-link($eui); }
 
   @include mobile-landscape-and-up {
@@ -114,7 +113,7 @@ section {
     margin: 0;
 
     a {
-      font-size: 0px;
+      color: $link;
       text-decoration: none;
       margin: 0;
 
@@ -122,34 +121,14 @@ section {
         margin-left: 0;
       }
 
-      &:before {
-        color: $text; // IE back-up
-        color: $link;
-        font: 60px 'Atzl';
-      }
-
       &:hover {
+        color: $link-hover;
         background: transparent;
-        &:before {
-          color: $text; // IE back-up
-          color: $link-hover;
-        }
       }
-
-      &.email:before { content: 'E'; }
-      &.twitter:before { content: 'A'; }
-      &.linkedin:before { content: 'B'; }
-      &.singlebrook:before { content: 'C'; }
-      &.flickr:before { content: 'D'; }
-      &.resume:before { content: 'F'; }
     }
 
     @include mobile-landscape-and-up {
       margin: 0 10px;
-
-      a:before {
-        font-size: 70px;
-      }
     }
   }
 }
