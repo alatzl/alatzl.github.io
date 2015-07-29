@@ -726,16 +726,16 @@ section h2 {
   color: #FFFFFF;
 }
 /* line 34, home/_view.scss */
-#opening .eui {
+#opening .bn {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  color: #DF5F41;
+  color: #ef5a23;
   padding: 3px 5px;
 }
 /* line 8, base/_mixins.scss */
-#opening .eui:hover, #opening .eui:active {
-  background: #DF5F41;
+#opening .bn:hover, #opening .bn:active {
+  background: #ef5a23;
   color: #FFFFFF;
 }
 @media only screen and (min-width: 568px) {

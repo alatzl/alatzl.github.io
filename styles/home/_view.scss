@@ -31,7 +31,7 @@ section {
   // branded link colors
   .twitter { @include colored-link($twitter); }
   .linkedin { @include colored-link($linkedin); }
-  .eui { @include colored-link($eui); }
+  .bn { @include colored-link($bn); }
 
   @include mobile-landscape-and-up {
     h3 {
