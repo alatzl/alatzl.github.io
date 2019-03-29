@@ -1,442 +1,73 @@
+@charset "UTF-8";
 /******************************************************************
 Stylesheet: Main Stylesheet
 ******************************************************************/
-/* Let's default this puppy out
--------------------------------------------------------------------------------*/
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+@keyframes slideInLeft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
 }
-
-article, aside, figure, footer, header, hgroup, nav, section, details, summary {
-  display: block;
+@keyframes slideInRight {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
-
-/* Responsive images and other embedded objects
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
-   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
-img,
-object,
-embed {
-  max-width: 100%;
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0);
+  }
+  25% {
+    filter: hue-rotate(45deg);
+  }
+  50% {
+    filter: hue-rotate(0);
+  }
+  75% {
+    filter: hue-rotate(-45deg);
+  }
+  100% {
+    filter: hue-rotate(0);
+  }
 }
-
-/* force a vertical scrollbar to prevent a jumpy page */
-html {
-  overflow-y: scroll;
-}
-
-/* we use a lot of ULs that aren't bulleted.
-  don't forget to restore the bullets within content. */
-ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted #000;
-  cursor: help;
-}
-
-/* tables still need cellspacing="0" in the markup */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-th {
-  font-weight: bold;
-  vertical-align: bottom;
-}
-
-td {
-  font-weight: normal;
-  vertical-align: top;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-pre {
-  white-space: pre;
-  /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 3 (and 2.1 as well, actually) */
-  word-wrap: break-word;
-  /* IE */
-}
-
-input[type=radio] {
-  vertical-align: text-bottom;
-}
-
-input[type=checkbox] {
-  vertical-align: bottom;
-}
-
-.ie7 input[type=checkbox] {
-  vertical-align: baseline;
-}
-
-.ie6 input {
-  vertical-align: text-bottom;
-}
-
-select, input, textarea {
-  font: 99% sans-serif;
-}
-
-table {
-  font-size: inherit;
-  font: 100%;
-}
-
-small {
-  font-size: 85%;
-}
-
-strong {
-  font-weight: bold;
-}
-
-td, td img {
-  vertical-align: top;
-}
-
-/* Make sure sup and sub don't screw with your line-heights
-  gist.github.com/413930 */
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* standardize any monospaced elements */
-pre, code, kbd, samp {
-  font-family: monospace, sans-serif;
-}
-
-/* hand cursor on clickable elements */
-.clickable,
-label,
-input[type=button],
-input[type=submit],
-button {
-  cursor: pointer;
-}
-
-/* Webkit browsers add a 2px margin outside the chrome of form elements */
-button, input, select, textarea {
-  margin: 0;
-}
-
-/* make buttons play nice in IE */
-button {
-  width: auto;
-  overflow: visible;
-}
-
-/* scale images in IE7 more attractively */
-.ie7 img {
-  -ms-interpolation-mode: bicubic;
-}
-
-/* prevent BG image flicker upon hover */
-.ie6 html {
-  filter: expression(document.execCommand("BackgroundImageCache", false, true));
-}
-
-/* let's clear some floats */
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
 *, *:before {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 
-.wrapper {
+#main {
   width: 90%;
-  max-width: 960px;
+  max-width: 800px;
+  min-height: 100%;
+  padding-bottom: 40px;
   margin: 0 auto;
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.row {
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
-.firstcol {
-  margin-left: 0 !important;
-}
-
-.lastcol {
-  margin-right: 0 !important;
-}
-
-.col1 {
-  width: 4.3333333333%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col2 {
-  width: 12.6666666667%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col3 {
-  width: 21%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col4 {
-  width: 29.3333333333%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col5 {
-  width: 37.6666666667%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col6 {
-  width: 46%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col7 {
-  width: 54.3333333333%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col8 {
-  width: 62.6666666667%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col9 {
-  width: 71%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col10 {
-  width: 79.3333333333%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col11 {
-  width: 87.6666666667%;
-  margin-left: 2%;
-  margin-right: 2%;
-  float: left;
-  display: inline;
-}
-
-.col12 {
-  width: 96%;
-  margin-right: 0;
-  float: left;
-  display: inline;
-}
-
-.container:after {
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.row:after, .clearfix:after {
-  clear: both;
-}
-
-.row, .clearfix {
-  zoom: 1;
-}
-
-.full-width, section {
-  width: 100%;
-}
-
-.half-width {
-  width: 50%;
-}
-
-.quarter-width {
-  width: 25%;
-}
-
-.third-width {
-  width: 33%;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.float-right {
-  float: right;
-}
-
-.float-left {
-  float: left;
-}
-
-h2, h3, h4, h5, h6 {
-  color: #404040;
-  margin-bottom: 15px;
 }
 
 h1 {
   font-weight: normal;
   color: #404040;
   font-size: 3em;
-  margin: 20px auto;
+  margin: 50px auto 0;
 }
-
-h2 {
-  font-size: 2em;
-  line-height: 120%;
-}
-
-h3 {
-  font-size: 1.25em;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 150%;
+h1 span {
+  display: inline-block;
+  position: relative;
 }
 
 p, a, ul, li {
   font-weight: 300;
-  font-size: 0.9em;
-  line-height: 120%;
+  font-size: 1em;
+  line-height: 1.35;
   color: #404040;
-}
-
-p {
-  margin-bottom: 15px;
 }
 
 a {
@@ -444,47 +75,66 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-}
-
-.brand-lighter {
-  font-weight: 300;
-}
-
-.brand-bolder {
-  font-weight: 700;
+  text-decoration: none;
+  animation: colorShift 6s ease-in both infinite;
 }
 
 b, strong {
   font-weight: 500;
 }
 
-section {
+.brand-lighter {
+  font-weight: 300;
+  animation: slideInLeft 2s ease-out 0s forwards;
+}
+
+.brand-bolder {
+  font-weight: 700;
+  right: -100%;
+  animation: slideInRight 1s ease-out 1s both;
+}
+
+.bio {
+  padding-top: 30px;
   margin-bottom: 20px;
 }
-section h3 {
-  font-size: 1.5em;
+.bio h3 {
+  font-size: 1.2em;
   font-weight: 300;
-}
-@media only screen and (min-width: 568px) {
-  section h3 {
-    font-size: 2em;
-  }
 }
 
 .contact-info {
+  padding: 0;
   margin: 0 0 20px;
 }
 .contact-info li {
   display: inline-block;
-  padding-right: 5px;
 }
-.contact-info li + li a {
-  padding-left: 7px;
-  border-left: 1px solid #404040;
+.contact-info li + li a:before {
+  content: "•";
+  font-size: 2em;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  padding: 0 10px;
 }
 .contact-info li a {
   line-height: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  background-color: white;
+  padding: 10px 0;
+}
+footer p {
+  font-size: 0.75em;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

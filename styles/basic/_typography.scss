@@ -1,42 +1,22 @@
 // TYPOGRAPHY
 
-h2, h3, h4, h5, h6 {
-  color: $text;
-  margin-bottom: 15px;
-}
-
 h1 {
   font-weight: normal;
   color: $text;
   font-size: 3em;
-  margin: 20px auto;
-}
+  margin: 50px auto 0;
 
-h2 {
-  font-size: 2em;
-  line-height: 120%;
-}
-
-h3 {
-  font-size: 1.25em;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 150%;
+  span {
+    display: inline-block;
+    position: relative;
+  }
 }
 
 p, a, ul, li {
   font-weight: 300;
-  font-size: .9em;
-  line-height: 120%;
+  font-size: 1em;
+  line-height: 1.35;
   color: $text;
-}
-
-p {
-  margin-bottom: 15px;
 }
 
 a {
@@ -44,18 +24,22 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    animation: colorShift 6s ease-in both infinite;
   }
-}
-
-.brand-lighter {
-  font-weight: 300;
-}
-
-.brand-bolder {
-  font-weight: 700;
 }
 
 b, strong {
   font-weight: 500;
+}
+
+.brand-lighter {
+  font-weight: 300;
+  animation: slideInLeft 2s ease-out 0s forwards;
+}
+
+.brand-bolder {
+  font-weight: 700;
+  right: -100%;
+  animation: slideInRight 1s ease-out 1s both;
 }

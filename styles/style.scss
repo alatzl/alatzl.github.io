@@ -2,14 +2,9 @@
 Stylesheet: Main Stylesheet
 ******************************************************************/
 
-@import "base/reset";
 @import "base/variables";
-@import "base/responsive-mixins";
-@import "base/mixins";
+@import "base/animations";
 @import "base/base";
-@import "base/grid";
-
-@import "basic/helpers";
 @import "basic/typography";
 
 @import "home/view";

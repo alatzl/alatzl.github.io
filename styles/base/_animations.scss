@@ -1,0 +1,21 @@
+// ANIMATIONS
+
+@keyframes slideInLeft {
+  0% { left: -100%; }
+  100% { left: 0; }
+}
+
+@keyframes slideInRight {
+  0% { right: -100%; }
+  100% { right: 0; }
+}
+
+$color-shift-interval: 45deg;
+
+@keyframes colorShift {
+  0% { filter: hue-rotate(0); }
+  25% { filter: hue-rotate($color-shift-interval); }
+  50% { filter: hue-rotate(0); }
+  75% { filter: hue-rotate(-$color-shift-interval); }
+  100% { filter: hue-rotate(0); }
+}

@@ -1,9 +1,0 @@
-// MIXINS
-
-@mixin colored-link($color) {
-  color: $color;
-
-  &:hover, &:active {
-    color: $color;
-  }
-}

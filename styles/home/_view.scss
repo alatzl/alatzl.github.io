@@ -1,35 +1,51 @@
 // HOME PAGE
 
-section {
-  @extend .full-width;
-  // padding-top: 20px 5% 0;
+.bio {
+  padding-top: 30px;
   margin-bottom: 20px;
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 300;
-  }
-
-  @include mobile-landscape-and-up {
-    h3 {
-      font-size: 2em;
-    }
   }
 }
 
 .contact-info {
+  padding: 0;
   margin: 0 0 20px;
 
   li {
     display: inline-block;
-    padding-right: 5px;
 
     & + li a {
-      padding-left: 7px;
-      border-left: 1px solid $text;
+      &:before {
+        content: '\2022';
+        font-size: 2em;
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        padding: 0 10px;
+      }
     }
+
     a {
       line-height: 1;
     }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  background-color: white;
+  padding: 10px 0;
+
+  p {
+    font-size: .75em;
+    margin: 0;
   }
 }
