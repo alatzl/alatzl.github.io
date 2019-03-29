@@ -1,18 +1,11 @@
 // VARIABLES
 
-$brand-dark: #618081; // rgb: 97, 128, 129; dark green
-$brand-light: #7EA913; // rgb: 126, 169, 19; light green
+$brand-dark: royalblue;
+$brand-light: cornflowerblue;
 $lightest: #FFFFFF;
 
-$text: #555;
-$link: rgba(126, 169, 19, 0.7);
-$link-hover: rgba(126, 169, 19, 1);
+$text: #404040;
+$link: $brand-light;
+$link-hover: $brand-dark;
 
-$selection: #7EA913;
-
-$rule: #ddd;
-
-$twitter: #00acee;
-$linkedin: #0e76a8;
-$flickr: #ff0084;
-$bn: #ef5a23;
+$font-stack: 'Montserrat', Helvetica, Arial, sans-serif;

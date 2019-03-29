@@ -1,12 +1,9 @@
 // MIXINS
 
 @mixin colored-link($color) {
-  @include border-radius(5px);
   color: $color;
-  padding: 3px 5px;
 
   &:hover, &:active {
-    background: $color;
-    color: $lightest;
+    color: $color;
   }
 }

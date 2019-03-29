@@ -1,13 +1,8 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Main Stylesheet
-
 ******************************************************************/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
-/* line 6, base/_reset.scss */
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
@@ -17,7 +12,6 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
   background: transparent;
 }
 
-/* line 15, base/_reset.scss */
 article, aside, figure, footer, header, hgroup, nav, section, details, summary {
   display: block;
 }
@@ -25,7 +19,6 @@ article, aside, figure, footer, header, hgroup, nav, section, details, summary {
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
-/* line 20, base/_reset.scss */
 img,
 object,
 embed {
@@ -33,33 +26,28 @@ embed {
 }
 
 /* force a vertical scrollbar to prevent a jumpy page */
-/* line 25, base/_reset.scss */
 html {
   overflow-y: scroll;
 }
 
 /* we use a lot of ULs that aren't bulleted.
   don't forget to restore the bullets within content. */
-/* line 29, base/_reset.scss */
 ul {
   list-style: none;
 }
 
-/* line 31, base/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 33, base/_reset.scss */
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
-/* line 38, base/_reset.scss */
 a {
   margin: 0;
   padding: 0;
@@ -68,37 +56,31 @@ a {
   background: transparent;
 }
 
-/* line 40, base/_reset.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 42, base/_reset.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted #000;
   cursor: help;
 }
 
 /* tables still need cellspacing="0" in the markup */
-/* line 45, base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 46, base/_reset.scss */
 th {
   font-weight: bold;
   vertical-align: bottom;
 }
 
-/* line 47, base/_reset.scss */
 td {
   font-weight: normal;
   vertical-align: top;
 }
 
-/* line 49, base/_reset.scss */
 hr {
   display: block;
   height: 1px;
@@ -108,12 +90,10 @@ hr {
   padding: 0;
 }
 
-/* line 51, base/_reset.scss */
 input, select {
   vertical-align: middle;
 }
 
-/* line 53, base/_reset.scss */
 pre {
   white-space: pre;
   /* CSS2 */
@@ -125,79 +105,65 @@ pre {
   /* IE */
 }
 
-/* line 60, base/_reset.scss */
-input[type="radio"] {
+input[type=radio] {
   vertical-align: text-bottom;
 }
 
-/* line 61, base/_reset.scss */
-input[type="checkbox"] {
+input[type=checkbox] {
   vertical-align: bottom;
 }
 
-/* line 62, base/_reset.scss */
-.ie7 input[type="checkbox"] {
+.ie7 input[type=checkbox] {
   vertical-align: baseline;
 }
 
-/* line 63, base/_reset.scss */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
-/* line 65, base/_reset.scss */
 select, input, textarea {
   font: 99% sans-serif;
 }
 
-/* line 67, base/_reset.scss */
 table {
   font-size: inherit;
   font: 100%;
 }
 
-/* line 69, base/_reset.scss */
 small {
   font-size: 85%;
 }
 
-/* line 71, base/_reset.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 73, base/_reset.scss */
 td, td img {
   vertical-align: top;
 }
 
 /* Make sure sup and sub don't screw with your line-heights
   gist.github.com/413930 */
-/* line 77, base/_reset.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-/* line 78, base/_reset.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 79, base/_reset.scss */
 sub {
   bottom: -0.25em;
 }
 
 /* standardize any monospaced elements */
-/* line 82, base/_reset.scss */
 pre, code, kbd, samp {
   font-family: monospace, sans-serif;
 }
 
 /* hand cursor on clickable elements */
-/* line 85, base/_reset.scss */
 .clickable,
 label,
 input[type=button],
@@ -207,84 +173,56 @@ button {
 }
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
-/* line 92, base/_reset.scss */
 button, input, select, textarea {
   margin: 0;
 }
 
 /* make buttons play nice in IE */
-/* line 95, base/_reset.scss */
 button {
   width: auto;
   overflow: visible;
 }
 
 /* scale images in IE7 more attractively */
-/* line 98, base/_reset.scss */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
 /* prevent BG image flicker upon hover */
-/* line 101, base/_reset.scss */
 .ie6 html {
   filter: expression(document.execCommand("BackgroundImageCache", false, true));
 }
 
 /* let's clear some floats */
-/* line 104, base/_reset.scss */
 .clearfix:before, .clearfix:after {
-  content: "\0020";
+  content: " ";
   display: block;
   height: 0;
   overflow: hidden;
 }
 
-/* line 105, base/_reset.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 106, base/_reset.scss */
 .clearfix {
   zoom: 1;
 }
 
-/* line 3, base/_base.scss */
 *, *:before {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 7, base/_base.scss */
-::-moz-selection {
-  background: #7EA913;
-  color: #FFFFFF;
-  text-shadow: none;
-}
-
-/* line 13, base/_base.scss */
-::selection {
-  background: #7EA913;
-  color: #FFFFFF;
-  text-shadow: none;
-}
-
-/* line 19, base/_base.scss */
 body {
-  background-image: url("../images/bkgd.png");
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
-/* line 22, base/_base.scss */
 .wrapper {
   width: 90%;
   max-width: 960px;
-  padding-top: 100px;
   margin: 0 auto;
 }
 
-/* line 39, base/_grid.scss */
 .container {
   position: relative;
   width: 100%;
@@ -293,42 +231,36 @@ body {
   padding: 0 20px;
 }
 
-/* line 47, base/_grid.scss */
 .row {
   float: left;
   clear: both;
   width: 100%;
 }
 
-/* line 59, base/_grid.scss */
 .firstcol {
   margin-left: 0 !important;
 }
 
-/* line 63, base/_grid.scss */
 .lastcol {
   margin-right: 0 !important;
 }
 
-/* line 67, base/_grid.scss */
 .col1 {
-  width: 4.33333%;
+  width: 4.3333333333%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 68, base/_grid.scss */
 .col2 {
-  width: 12.66667%;
+  width: 12.6666666667%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 69, base/_grid.scss */
 .col3 {
   width: 21%;
   margin-left: 2%;
@@ -337,25 +269,22 @@ body {
   display: inline;
 }
 
-/* line 70, base/_grid.scss */
 .col4 {
-  width: 29.33333%;
+  width: 29.3333333333%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 71, base/_grid.scss */
 .col5 {
-  width: 37.66667%;
+  width: 37.6666666667%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 72, base/_grid.scss */
 .col6 {
   width: 46%;
   margin-left: 2%;
@@ -364,25 +293,22 @@ body {
   display: inline;
 }
 
-/* line 73, base/_grid.scss */
 .col7 {
-  width: 54.33333%;
+  width: 54.3333333333%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 74, base/_grid.scss */
 .col8 {
-  width: 62.66667%;
+  width: 62.6666666667%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 75, base/_grid.scss */
 .col9 {
   width: 71%;
   margin-left: 2%;
@@ -391,25 +317,22 @@ body {
   display: inline;
 }
 
-/* line 76, base/_grid.scss */
 .col10 {
-  width: 79.33333%;
+  width: 79.3333333333%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 77, base/_grid.scss */
 .col11 {
-  width: 87.66667%;
+  width: 87.6666666667%;
   margin-left: 2%;
   margin-right: 2%;
   float: left;
   display: inline;
 }
 
-/* line 78, base/_grid.scss */
 .col12 {
   width: 96%;
   margin-right: 0;
@@ -417,431 +340,151 @@ body {
   display: inline;
 }
 
-/* line 81, base/_grid.scss */
 .container:after {
-  content: "\0020";
+  content: " ";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
 }
 
-/* line 89, base/_grid.scss */
 .row:after, .clearfix:after {
   clear: both;
 }
 
-/* line 93, base/_grid.scss */
 .row, .clearfix {
   zoom: 1;
 }
 
-/* line 3, basic/_helpers.scss */
-.full-width, header, header nav, section, #work .project .flexslider, #work .project .details {
+.full-width, section {
   width: 100%;
 }
 
-/* line 4, basic/_helpers.scss */
 .half-width {
   width: 50%;
 }
 
-/* line 5, basic/_helpers.scss */
 .quarter-width {
   width: 25%;
 }
 
-/* line 6, basic/_helpers.scss */
-.third-width, .lt-ie9 h1#logo a {
+.third-width {
   width: 33%;
 }
 
-/* line 8, basic/_helpers.scss */
-.text-center, header h1 a, header nav #menu-main, footer, section h2, #opening h3, #contact h4, .social-media {
+.text-center {
   text-align: center;
 }
 
-/* line 9, basic/_helpers.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 10, basic/_helpers.scss */
-.text-left, .lt-ie9 h1#logo a {
+.text-left {
   text-align: left;
 }
 
-/* line 11, basic/_helpers.scss */
 .text-justify {
   text-align: justify;
 }
 
-/* line 12, basic/_helpers.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 14, basic/_helpers.scss */
-.float-right, .lt-ie9 #work .project .details {
+.float-right {
   float: right;
 }
 
-/* line 15, basic/_helpers.scss */
-.float-left, .lt-ie9 h1#logo a, .lt-ie9 #work .project .flexslider {
+.float-left {
   float: left;
 }
 
-@font-face {
-  font-family: 'Atzl';
-  src: url("../fonts/atzl.eot");
-  src: url("../fonts/atzl.eot?#iefix") format("embedded-opentype"), url("../fonts/atzl.woff") format("woff"), url("../fonts/atzl.ttf") format("truetype"), url("../fonts/atzl.svg#svgFontName") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 8, basic/_typography.scss */
 h2, h3, h4, h5, h6 {
-  font-family: 'Source Sans Pro', Helvetica, Arial;
-  color: #555;
+  color: #404040;
   margin-bottom: 15px;
 }
 
-/* line 14, basic/_typography.scss */
 h1 {
-  font-family: Lora, Georgia, serif;
-  color: #7EA913;
+  font-weight: normal;
+  color: #404040;
   font-size: 3em;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
-/* line 21, basic/_typography.scss */
 h2 {
   font-size: 2em;
   line-height: 120%;
 }
 
-/* line 26, basic/_typography.scss */
 h3 {
   font-size: 1.25em;
   font-weight: 500;
 }
 
-/* line 31, basic/_typography.scss */
 h4 {
-  font: 300 1.2em/150% Lora, Georgia, sans-serif;
   font-size: 1.2em;
   font-weight: 300;
   line-height: 150%;
 }
 
-/* line 38, basic/_typography.scss */
 p, a, ul, li {
-  font: 300 .9em/130% Lora, Georgia, serif;
-  color: #555;
+  font-weight: 300;
+  font-size: 0.9em;
   line-height: 120%;
+  color: #404040;
 }
 
-/* line 44, basic/_typography.scss */
 p {
   margin-bottom: 15px;
 }
 
-/* line 48, basic/_typography.scss */
 a {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #7EA913;
-  padding: 3px 5px;
-  font: inherit;
+  color: cornflowerblue;
   text-decoration: none;
 }
-/* line 8, base/_mixins.scss */
-a:hover, a:active {
-  background: #7EA913;
-  color: #FFFFFF;
+a:hover {
+  text-decoration: underline;
 }
 
-/* line 54, basic/_typography.scss */
+.brand-lighter {
+  font-weight: 300;
+}
+
+.brand-bolder {
+  font-weight: 700;
+}
+
 b, strong {
   font-weight: 500;
 }
 
-/* line 3, shared/_header.scss */
-header {
-  -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  background: #FFFFFF;
-  z-index: 100;
-  padding-bottom: 10px;
-}
-@media only screen and (min-width: 568px) {
-  /* line 3, shared/_header.scss */
-  header {
-    padding-bottom: 5px;
-  }
-}
-/* line 17, shared/_header.scss */
-header h1#logo {
-  margin: 0;
-}
-/* line 21, shared/_header.scss */
-header h1 a {
-  display: block;
-  font-size: 24px;
-  font-weight: 300;
-  color: #7EA913;
-  font-style: italic;
-  padding-top: 5px;
-  margin: 0;
-}
-/* line 31, shared/_header.scss */
-header h1 a:hover {
-  background: transparent;
-  color: #7EA913;
-}
-@media only screen and (min-width: 568px) {
-  /* line 21, shared/_header.scss */
-  header h1 a {
-    float: left;
-    text-align: left;
-    width: 30%;
-    margin: 0 0 0 10%;
-  }
-}
-/* line 45, shared/_header.scss */
-header nav {
-  max-width: 960px;
-  padding-top: 10px;
-  margin-right: 10%;
-}
-/* line 54, shared/_header.scss */
-header nav #menu-main li {
-  display: inline-block;
-  margin: 0 10px;
-}
-/* line 58, shared/_header.scss */
-header nav #menu-main li a {
-  font: 300 16px/120% 'Lora', serif;
-  font-style: italic;
-}
-/* line 62, shared/_header.scss */
-header nav #menu-main li a:hover {
-  background-color: #7EA913;
-}
-@media only screen and (min-width: 568px) {
-  /* line 45, shared/_header.scss */
-  header nav {
-    width: 50%;
-    float: right;
-  }
-  /* line 73, shared/_header.scss */
-  header nav #menu-main {
-    text-align: right;
-  }
-}
-
-/* line 80, shared/_header.scss */
-.lt-ie9 h1#logo a {
-  margin: 0 0 0 10%;
-}
-
-/* line 6, shared/_footer.scss */
-footer .colophon {
-  font-size: .7em;
-  font-style: italic;
-  width: 80%;
-  margin: 0 auto 10px;
-}
-@media only screen and (min-width: 768px) {
-  /* line 6, shared/_footer.scss */
-  footer .colophon {
-    width: 40%;
-  }
-}
-/* line 16, shared/_footer.scss */
-footer .colophon a {
-  padding: 2px;
-  color: #7EA913;
-}
-/* line 20, shared/_footer.scss */
-footer .colophon a:hover {
-  background: #7EA913;
-  color: #FFFFFF;
-}
-
-/* line 3, home/_view.scss */
 section {
-  padding-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-/* line 8, home/_view.scss */
-section + section {
-  border-top: 1px solid #ddd;
-}
-/* line 12, home/_view.scss */
-section h2 {
-  font-size: 4em;
-  font-weight: 400;
-  text-transform: lowercase;
-  font-variant: small-caps;
-  margin-bottom: 30px;
-}
-
-/* line 22, home/_view.scss */
-#opening {
-  padding: 0 5%;
-}
-/* line 25, home/_view.scss */
-#opening h3 {
-  font-size: 24px;
+section h3 {
+  font-size: 1.5em;
   font-weight: 300;
-}
-/* line 32, home/_view.scss */
-#opening .twitter {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #00acee;
-  padding: 3px 5px;
-}
-/* line 8, base/_mixins.scss */
-#opening .twitter:hover, #opening .twitter:active {
-  background: #00acee;
-  color: #FFFFFF;
-}
-/* line 33, home/_view.scss */
-#opening .linkedin {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #0e76a8;
-  padding: 3px 5px;
-}
-/* line 8, base/_mixins.scss */
-#opening .linkedin:hover, #opening .linkedin:active {
-  background: #0e76a8;
-  color: #FFFFFF;
-}
-/* line 34, home/_view.scss */
-#opening .bn {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #ef5a23;
-  padding: 3px 5px;
-}
-/* line 8, base/_mixins.scss */
-#opening .bn:hover, #opening .bn:active {
-  background: #ef5a23;
-  color: #FFFFFF;
 }
 @media only screen and (min-width: 568px) {
-  /* line 37, home/_view.scss */
-  #opening h3 {
-    font-size: 40px;
+  section h3 {
+    font-size: 2em;
   }
 }
 
-/* line 44, home/_view.scss */
-#work .project {
-  width: 96%;
-  margin: 0 2% 20px;
-  overflow: hidden;
+.contact-info {
+  margin: 0 0 20px;
 }
-/* line 49, home/_view.scss */
-#work .project + .project {
-  padding-top: 30px;
-  border-top: 1px solid #ddd;
-}
-/* line 58, home/_view.scss */
-#work .project .flexslider {
-  margin: 0 0 55px;
-}
-/* line 63, home/_view.scss */
-#work .project .details h3 {
-  font: 2em Lora, Georgia, serif;
-  font-style: italic;
-}
-/* line 68, home/_view.scss */
-#work .project .details .subdetail {
-  font: 1.5em/1em 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  font-variant: small-caps;
-  font-weight: 300;
-  text-transform: lowercase;
-}
-@media only screen and (min-width: 768px) {
-  /* line 77, home/_view.scss */
-  #work .project .flexslider {
-    width: 55%;
-    max-width: 600px;
-    float: left;
-    margin-right: 5%;
-  }
-  /* line 84, home/_view.scss */
-  #work .project .details {
-    width: 40%;
-    float: right;
-    margin: 5px 0 0;
-  }
-}
-
-/* line 93, home/_view.scss */
-#about, #contact {
-  padding: 40px 5% 0;
-}
-@media only screen and (min-width: 768px) {
-  /* line 93, home/_view.scss */
-  #about, #contact {
-    padding: 40px 15% 0;
-  }
-}
-
-/* line 107, home/_view.scss */
-.social-media {
-  padding-top: 20px;
-}
-/* line 111, home/_view.scss */
-.social-media li {
+.contact-info li {
   display: inline-block;
-  margin: 0;
+  padding-right: 5px;
 }
-/* line 115, home/_view.scss */
-.social-media li a {
-  color: rgba(126, 169, 19, 0.7);
-  text-decoration: none;
-  margin: 0;
+.contact-info li + li a {
+  padding-left: 7px;
+  border-left: 1px solid #404040;
 }
-/* line 120, home/_view.scss */
-.social-media li a:first-child {
-  margin-left: 0;
-}
-/* line 124, home/_view.scss */
-.social-media li a:hover {
-  color: #7ea913;
-  background: transparent;
-}
-@media only screen and (min-width: 568px) {
-  /* line 111, home/_view.scss */
-  .social-media li {
-    margin: 0 10px;
-  }
+.contact-info li a {
+  line-height: 1;
 }
 
-/* line 138, home/_view.scss */
-.lt-ie9 #work .project .flexslider {
-  width: 55%;
-  max-width: 600px;
-  margin-right: 5%;
-}
-/* line 145, home/_view.scss */
-.lt-ie9 #work .project .details {
-  width: 40%;
-  margin: 5px 0 0;
-}
-/* line 152, home/_view.scss */
-.lt-ie9 #about, .lt-ie9 #contact {
-  padding: 40px 15% 0;
-}
+/*# sourceMappingURL=style.css.map */

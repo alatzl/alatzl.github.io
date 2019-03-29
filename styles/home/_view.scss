@@ -2,154 +2,34 @@
 
 section {
   @extend .full-width;
-  padding-top: 40px;
-  margin-bottom: 40px;
-
-  & + section {
-    border-top: 1px solid #ddd;
-  }
-
-  h2 {
-    @extend .text-center;
-    font-size: 4em;
-    font-weight: 400;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    margin-bottom: 30px;
-  }
-}
-
-#opening {
-  padding: 0 5%;
+  // padding-top: 20px 5% 0;
+  margin-bottom: 20px;
 
   h3 {
-    @extend .text-center;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 300;
   }
 
-  // branded link colors
-  .twitter { @include colored-link($twitter); }
-  .linkedin { @include colored-link($linkedin); }
-  .bn { @include colored-link($bn); }
-
   @include mobile-landscape-and-up {
     h3 {
-      font-size: 40px;
+      font-size: 2em;
     }
   }
 }
 
-#work {
-  .project {
-    width: 96%;
-    margin: 0 2% 20px;
-    overflow: hidden;
-
-    & + .project {
-      padding-top: 30px;
-      border-top: 1px solid $rule;
-    }
-
-    .flexslider, .details {
-      @extend .full-width;
-    }
-
-    .flexslider {
-      margin: 0 0 55px;
-    }
-
-    .details {
-      h3 {
-        font: 2em Lora, Georgia, serif;
-        font-style: italic;
-      }
-
-      .subdetail {
-        font: 1.5em/1em 'Source Sans Pro', Helvetica, Arial, sans-serif;
-        font-variant: small-caps;
-        font-weight: 300;
-        text-transform: lowercase;
-      }
-    }
-
-    @include tablet-portrait-and-up {
-      .flexslider {
-        width: 55%;
-        max-width: 600px;
-        float: left;
-        margin-right: 5%;
-      }
-
-      .details {
-        width: 40%;
-        float: right;
-        margin: 5px 0 0;
-      }
-    }
-  }
-}
-
-#about, #contact {
-  padding: 40px 5% 0;
-
-  @include tablet-portrait-and-up {
-    padding: 40px 15% 0;
-  }
-}
-
-#contact {
-  h4 {
-    @extend .text-center;
-  }
-}
-
-.social-media {
-  @extend .text-center;
-  padding-top: 20px;
+.contact-info {
+  margin: 0 0 20px;
 
   li {
     display: inline-block;
-    margin: 0;
+    padding-right: 5px;
 
+    & + li a {
+      padding-left: 7px;
+      border-left: 1px solid $text;
+    }
     a {
-      color: $link;
-      text-decoration: none;
-      margin: 0;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:hover {
-        color: $link-hover;
-        background: transparent;
-      }
+      line-height: 1;
     }
-
-    @include mobile-landscape-and-up {
-      margin: 0 10px;
-    }
-  }
-}
-
-.lt-ie9 {
-  #work .project {
-    .flexslider {
-      @extend .float-left;
-      width: 55%;
-      max-width: 600px;
-      margin-right: 5%;
-    }
-
-    .details {
-      @extend .float-right;
-      width: 40%;
-      margin: 5px 0 0;
-    }
-  }
-
-  #about, #contact {
-    padding: 40px 15% 0;
   }
 }

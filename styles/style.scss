@@ -1,17 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Main Stylesheet
-
 ******************************************************************/
-
-
-//
-// IMPORTING STYLES
-//
-
-@import "compass";
 
 @import "base/reset";
 @import "base/variables";
@@ -21,9 +10,6 @@ Stylesheet: Main Stylesheet
 @import "base/grid";
 
 @import "basic/helpers";
-@import "basic/fonts";
 @import "basic/typography";
 
-@import "shared/header";
-@import "shared/footer";
 @import "home/view";
